@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Пазл Судьбы</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    header {
+      background-color: #ff5976;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 2em;
+    }
+    #puzzle-container {
+      margin: 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #ff9f43;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #ff7b00;
+    }
+    #ending {
+      display: none;
+      text-align: center;
+    }
+    #comic {
+      width: 90%;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>Пазл Судьбы: Инженер & Учёный</header>
+  <div id="game">
+    <div id="puzzle-container">
+      <iframe src="https://puzzel.org/ru/embed/puzzle?p=-Nhd6CHzRIwv-xxxxx" width="600" height="400" style="border:none;"></iframe>
+    </div>
+    <button class="btn" onclick="showEnding()">Собрал! Что дальше?</button>
+  </div>
+  <div id="ending">
+    <h2>И вот они встретились...</h2>
+    <img id="comic" src="comic_placeholder.png" alt="Комикс финал">
+    <p>🔧❤️🧪 Искра пролетела между каской и интеллектом.</p>
+    <button class="btn" onclick="location.reload()">Сыграть снова</button>
+  </div>
+  <script>
+    function showEnding() {
+      document.getElementById('game').style.display = 'none';
+      document.getElementById('ending').style.display = 'block';
+    }
+  </script>
+
+  <audio autoplay loop>
+    <source src="romantic_music.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+  </audio>
+</body>
+
+</html>
